@@ -3,8 +3,7 @@
 const { send } = require('micro');
 const { router, get } = require('microrouter');
 
-const config = require('./config');
-console.log(config)
+const config = require('./config');	
 const { spotifyService } = require('./services')(config);
 
 const notfound = (_, res) => send(res, 404, 'Not found route');
